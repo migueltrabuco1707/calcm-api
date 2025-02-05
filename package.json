@@ -1,0 +1,31 @@
+{
+  "name": "calcm-api",
+  "version": "1.0.0",
+  "description": "A node.js-based api developed for the Calcm app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueltrabuco1707/calcm-api.git"
+  },
+  "author": "Miguel Trabuco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/migueltrabuco1707/calcm-api/issues"
+  },
+  "homepage": "https://github.com/migueltrabuco1707/calcm-api#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
