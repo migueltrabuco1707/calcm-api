@@ -1,32 +1,54 @@
 {
-  "name": "calcm-api",
-  "version": "1.0.0",
-  "description": "A node.js-based api developed for the Calcm app",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/migueltrabuco1707/calcm-api.git"
-  },
-  "author": "Miguel Trabuco",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/migueltrabuco1707/calcm-api/issues"
-  },
-  "homepage": "https://github.com/migueltrabuco1707/calcm-api#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.19.0",
-    "@types/dotenv": "^6.1.1",
-    "eslint": "^9.19.0",
-    "eslint-config-prettier": "^10.0.1",
-    "globals": "^15.14.0",
-    "prettier": "^3.4.2",
-    "typescript": "^5.7.3",
-    "typescript-eslint": "^8.23.0"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7"
-  }
+	"name": "calcm-api",
+	"version": "1.0.0",
+	"description": "A node.js-based api developed for the Calcm app",
+	"main": "app.js",
+	"scripts": {
+		"dev": "tsx --watch src/app.ts",
+		"test": "jest",
+		"build": "tsc",
+		"start": "node ./build/app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/migueltrabuco1707/calcm-api.git"
+	},
+	"author": "Miguel Trabuco",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/migueltrabuco1707/calcm-api/issues"
+	},
+	"homepage": "https://github.com/migueltrabuco1707/calcm-api#readme",
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"testMatch": [
+			"**/?(*.)+(spec|test).[tj]s?(x)"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.19.0",
+		"@types/dotenv": "^6.1.1",
+		"@types/jest": "^29.5.14",
+		"eslint": "^9.19.0",
+		"eslint-config-prettier": "^10.0.1",
+		"globals": "^15.14.0",
+		"jest": "^29.7.0",
+		"prettier": "^3.4.2",
+		"ts-jest": "^29.2.5",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.3",
+		"typescript-eslint": "^8.23.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.7"
+	}
 }

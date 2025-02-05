@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { IEnv } from '../interfaces/general';
 
 function loadAndValidadeEnv(envName: string): string {
 	const env: string | undefined = process.env[envName];
@@ -10,10 +11,10 @@ function loadAndValidadeEnv(envName: string): string {
 	return env;
 }
 
-export const envs: object = {
+export const envs: IEnv = {
 	port: loadAndValidadeEnv('PORT'),
 	mongoUrl: loadAndValidadeEnv('MONGO_URL'),
 	mailUser: loadAndValidadeEnv('MAIL_USER'),
-	mailPass: loadAndValidadeEnv('MAIL_PASS'),
+	mailPassword: loadAndValidadeEnv('MAIL_PASSWORD'),
 	secret: loadAndValidadeEnv('SECRET'),
 };
