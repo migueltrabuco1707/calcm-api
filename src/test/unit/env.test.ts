@@ -8,9 +8,9 @@ describe('Test environment variables', () => {
 	});
 
 	test('MongoDB url must be defined', () => {
-		expect(envs.mongoUrl).toBeDefined();
-		expect(envs.mongoUrl).not.toBeNull();
-		expect(typeof envs.mongoUrl).toBe('string');
+		expect(envs.databaseUrl).toBeDefined();
+		expect(envs.databaseUrl).not.toBeNull();
+		expect(typeof envs.databaseUrl).toBe('string');
 	});
 
 	test('Mail user must be defined', () => {
