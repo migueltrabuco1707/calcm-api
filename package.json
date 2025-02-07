@@ -4,10 +4,10 @@
 	"description": "A node.js-based api developed for the Calcm app",
 	"main": "app.js",
 	"scripts": {
-		"dev": "tsx --watch src/app.ts",
+		"dev": "tsx --watch src/server.ts",
 		"test": "jest",
 		"build": "tsc",
-		"start": "node ./build/app.js"
+		"start": "node ./build/server.js"
 	},
 	"repository": {
 		"type": "git",
@@ -36,8 +36,11 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.19.0",
+		"@types/cors": "^2.8.17",
 		"@types/dotenv": "^6.1.1",
+		"@types/express": "^5.0.0",
 		"@types/jest": "^29.5.14",
+		"@types/supertest": "^6.0.2",
 		"eslint": "^9.19.0",
 		"eslint-config-prettier": "^10.0.1",
 		"globals": "^15.14.0",
@@ -49,6 +52,9 @@
 		"typescript-eslint": "^8.23.0"
 	},
 	"dependencies": {
-		"dotenv": "^16.4.7"
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.7",
+		"express": "^4.21.2",
+		"supertest": "^7.0.0"
 	}
 }
