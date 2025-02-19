@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 
+
 const app = express(); // Não é necessário tipar explicitamente como express.Express
 
 app.use(cors());
