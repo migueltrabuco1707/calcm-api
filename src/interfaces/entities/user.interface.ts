@@ -3,5 +3,6 @@ export interface IUser {
 	email: string;
 	code: string | null;
 	createdAt: Date;
+	updatedAt: Date;
 	codeCreatedAt: Date | null;
 }
