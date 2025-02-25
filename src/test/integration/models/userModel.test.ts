@@ -52,21 +52,26 @@ describe('Test CRUD functions from user model and the database connection', () =
 		expect(userDocument?.createdAt).toBeDefined();
 	});
 
-	test('Update user in database: userDocument must be defined with new code value', async () => {
-		let userDocument: IUser | null;
+	test('Update user in database: userUpdated must be defined with new code value', async () => {
+		let userUpdated: IUser | null;
+		const newCode: number = 3333;
 		try {
-			userDocument = await UserModel.findOne({ email: userData.email });
+			userUpdated = await UserModel.findOneAndUpdate(
+				{ email: userData.email },
+				{ code: newCode },
+				{ new: true },
+			);
 		} catch (error) {
 			console.log(error);
-			userDocument = null;
+			userUpdated = null;
 		}
 
-		expect(userDocument).not.toBeNull();
-		expect(userDocument?.email).toStrictEqual(userData.email);
-		expect(userDocument?.code).toStrictEqual(userData.code);
-		expect(userDocument?.id).toBeDefined();
-		expect(userDocument?.codeCreatedAt).toStrictEqual(userData.codeCreatedAt);
-		expect(userDocument?.createdAt).toBeDefined();
+		expect(userUpdated).not.toBeNull();
+		expect(userUpdated?.email).toStrictEqual(userData.email);
+		expect(userUpdated?.code).toStrictEqual(newCode);
+		expect(userUpdated?.id).toBeDefined();
+		expect(userUpdated?.codeCreatedAt).toStrictEqual(userData.codeCreatedAt);
+		expect(userUpdated?.createdAt).toBeDefined();
 	});
 
 	afterAll(async () => {
